@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Student-project.iml" filepath="$PROJECT_DIR$/.idea/Student-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework/homework/homework.iml" filepath="$PROJECT_DIR$/homework/homework/homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework/homework/jdbc_druid/jdbc_druid.iml" filepath="$PROJECT_DIR$/homework/homework/jdbc_druid/jdbc_druid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/back-end/student-manager/student-manager.iml" filepath="$PROJECT_DIR$/back-end/student-manager/student-manager.iml" />
+    </modules>
+  </component>
+</project>

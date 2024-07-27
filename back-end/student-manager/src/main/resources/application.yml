@@ -1,0 +1,18 @@
+server:
+  port: 8821
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 20021229Fu
+    url: jdbc:mysql://localhost:3306/example?useSSL=false&characterEncoding=utf-8
+
+
+
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days

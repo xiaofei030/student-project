@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mapper标签要指定namespace属性，不然会报错，可看做包名-->
+<mapper namespace="course">
+
+    <!-- 单表查询  -->
+    <select id="findCourseAll" resultType="homework2.Course">
+        select * from courses
+    </select>
+
+    <!--  关联表查询  -->
+    <select id="findStudentByCourseName" parameterType="String" resultType="homework2.Student">
+        SELECT s.*
+        FROM student s
+                 INNER JOIN student_courses cs ON s.id = cs.student_id
+                 INNER JOIN courses c ON cs.course_id = c.id
+        WHERE c.name = #{courseName};
+
+    </select>
+
+    <!-- 动态查询 -->
+    <select id="findStudentByParams" parameterType="map" resultType="homework2.Student">
+        SELECT * FROM student
+        <where>
+            <if test="phone != null">
+                AND phone = #{phone}
+            </if>
+            <if test="qq != null">
+                AND qq = #{qq}
+            </if>
+        </where>
+    </select>
+
+</mapper>
